@@ -1,0 +1,5 @@
+<world ambient="30%" name="RT-Sliced Cone" />
+<screen resolution="25%"/>
+<light position="(0, 0, -50)" />
+<camera position="(0.0, -5, -15.0)" lookat="(0, 0, 0)" />
+<cone position="(0, 0, 0)" axe="(0, 1, 0)" k="0.3" limit="2"/>

@@ -1,0 +1,6 @@
+<world ambient="10%" name="RT-Sliced cylinder" />
+<screen resolution="25%"/>
+<light position="(0, 0, 15)" />
+<camera position="(0.0, 8.0, 15.0)" lookat="(0, 0, 0)" />
+<cylinder position="(0, 0, 0)" axe="(0.0, 1.0, 0.0)" rayon="2.0" limit="2" rotation="(80, -45, 0)"/>
+<torus position="(0, 0, 0)" k="1.0" l="2.0" axe="(0, -1, 2)" noise="voronoi" />

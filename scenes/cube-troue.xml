@@ -1,0 +1,6 @@
+<world ambient="30%" />
+<screen resolution="50%" />
+<camera position="(0, -15, -50)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(0, -20, 0)" type="default" color="#FFFFFF" intensity="100%" />
+<cubet position="(0, 0, 0)" color="rgb(161, 27, 250)" noise="perlin" />
+<plane position="(0, 10, 0)" normal="(0, -1, 0)" color="rgb(255, 255, 0)" />

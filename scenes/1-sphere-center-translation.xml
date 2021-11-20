@@ -1,0 +1,6 @@
+<world ambient="30%" name="RT- Sphere center translation" />
+<screen width="1200" height="600" />
+<light position="(0, 0, -50)" />
+<camera position="(0.0, 0.0, -50.0)" lookat="(0, 0, 0)" />
+<sphere position="(0, 0, 0)" rayon="5" />
+<sphere position="(0, 0, 0)" rayon="5" translation="(15, 0, 0)"/>

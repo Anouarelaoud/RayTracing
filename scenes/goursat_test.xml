@@ -1,0 +1,6 @@
+<world ambient="30%" />
+<screen width="1200" height="600" resolution="50%" />
+<camera position="(-20, -5, -10)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(0, -20, 0)" type="default" color="#FFFFFF" intensity="100%" />
+<goursat position="(0, 0, 0)" />
+<plane position="(0, 2, 0)" normal="(0, -1, 0)" color="rgb(255, 255, 0)" />

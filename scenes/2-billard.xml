@@ -1,0 +1,23 @@
+<world ambient="20%" name="RT - Billard" />
+<screen resolution="25%" />
+<light position="(60, -100, -50)" intensity="70%" />
+<light position="(-60, -100, -50)" intensity="70%" />
+<camera position="(0.0, -50.0, -100.0)" lookat="(0, 0, 0)" />
+<plane position="(0, 2, 0)" normal="(0, -1, 0)" color="#00FF00" />
+<sphere position="(0, 0, 0)" rayon="2" color="#FF0000" />
+<sphere position="(2, 0, 3.5)" rayon="2" color="#FFFF00" />
+<sphere position="(-2, 0, 3.5)" rayon="2" color="#FF0000" />
+<sphere position="(-4, 0, 7)" rayon="2" color="#FFFF00" />
+<sphere position="(0, 0, 7)" rayon="2" color="#000000" />
+<sphere position="(4, 0, 7)" rayon="2" color="#FF0000" />
+<sphere position="(6, 0, 10.5)" rayon="2" color="#FFFF00" />
+<sphere position="(2, 0, 10.5)" rayon="2" color="#FF0000" />
+<sphere position="(-2, 0, 10.5)" rayon="2" color="#FFFF00" />
+<sphere position="(-6, 0, 10.5)" rayon="2" color="#FF0000" />
+<sphere position="(-8, 0, 14)" rayon="2" color="#FFFF00" />
+<sphere position="(-4, 0, 14)" rayon="2" color="#FFFF00" />
+<sphere position="(0, 0, 14)" rayon="2" color="#FF0000" />
+<sphere position="(4, 0, 14)" rayon="2" color="#FFFF00" />
+<sphere position="(8, 0, 14)" rayon="2" color="#FF0000" />
+<sphere position="(10, 0, -10)" rayon="2" color="#FFFFFF" />
+<cylinder position="(-70, 1, 60)" axe="(1, 0, -1)" rayon="1" color="rgb(196, 140, 96)" limit="10" />

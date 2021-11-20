@@ -1,0 +1,5 @@
+<world ambient="30%" />
+<screen resolution="50%" />
+<camera position="(200, 0, -100)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(0, 10, -70)" type="default" color="#FFFFFF" intensity="100%" />
+<moebius k="20" noise="perlin" color="rgb(166, 2, 166)"/>

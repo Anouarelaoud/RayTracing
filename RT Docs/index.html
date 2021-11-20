@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body data-offset="0" data-spy="scroll" data-target="#navbar-example3">
+	<nav class="navbar navbar-light bg-light sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="./assets/logo-small.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+				Docs
+			</a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col col-2">
+				<nav id="navbar-example3" class="navbar navbar-light bg-light position-fixed">
+					<nav class="nav nav-pills flex-column align-items-start">
+					<a class="nav-link" href="#gettingStarted">Getting started</a>
+					<a class="nav-link" href="#sceneFile">Scene file</a>
+					<nav class="nav nav-pills flex-column">
+						<a class="nav-link ml-3 my-1" href="#world">World</a>
+						<a class="nav-link ml-3 my-1" href="#screen">Screen</a>
+						<a class="nav-link ml-3 my-1" href="#camera">Camera</a>
+						<a class="nav-link ml-3 my-1" href="#objects">Rules table</a>
+					</nav>
+					<a class="nav-link" href="#interface">Interface</a>
+					<a class="nav-link" href="#ux">User Experience</a>
+				</nav>
+			</div>
+			<div class="col col-10">
+				<div>
+					<h4 id="gettingStarted"><a href="#gettingStarted">#</a> Getting started</h4>
+					<div class="p">Clone our repository:
+						<div class="code">
+							<code>
+								$ git clone https://github.com/imgox/RT_final
+							</code>
+						</div>
+						Make sure that you have OpenGL installed. and make:
+						<div class="code">
+							<code>
+								$ make
+							</code>
+						</div>
+						after successfully compiling the objects you can run RT like this:
+						<div class="code">
+							<code>
+								$ ./rt [scene-file]
+							</code>
+						</div>
+					</div>
+					<h4 id="sceneFile"><a href="#sceneFile">#</a> Scene file</h4>
+					<div class="p">
+						We accept scene file in XML format with the following requirements and conditions:
+						<br>
+						<br>
+						<h5 id=world><a href="#world">#</a> World object</h5>
+						Every scene file should have a <samp>world</samp> object. <br>
+						example:
+						<div class="code">
+							<code>
+								&lt;world ambient="20%" /&gt;
+							</code>
+						</div>
+
+						<h5 id=screen><a href="#screen">#</a> Screen object</h5>
+						Every scene file should have a <samp>screen</samp> object. <br>
+						example:
+						<div class="code">
+							<code>
+								&lt;screen resolution="25%" /&gt;
+							</code>
+						</div>
+
+						<h5 id=camera><a href="#camera">#</a> Camera object</h5>
+						Every scene file should have a <samp>camera</samp> object. <br>
+						example:
+						<div class="code">
+							<code>
+								&lt;camera position="(0, 0, 50)" lookat="(0, 0, 0)" /&gt;
+							</code>
+						</div>
+
+						<h5 id=objects><a href="#objects">#</a> Rules table</h5>
+
+						<table class="table">
+							<thead>
+							  <tr>
+								<th scope="col">Object</th>
+								<th scope="col">Accepted properties</th>
+								<th scope="col">Required Properties</th>
+								<th scope="col">Constraints</th>
+							  </tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row"><samp>world</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>ambient</samp>
+												<br>
+												<small>Controls the amount of ambient in the scene</small>
+											</li>
+											<li>
+												<samp>name</samp>
+												<br>
+												<small>Specifies the name of the scene</small>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>ambient</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>ambient</samp>
+												<ul>
+													<li>percentage or float value</li>
+													<li>between 0% and 100%</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>screen</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>resolution</samp>
+												<br>
+												<small>Controls the resolution of the scene</small>
+											</li>
+										</ul>
+									</td>
+									<td>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>resolution</samp>
+												<ul>
+													<li>percentage or float value</li>
+													<li>Accepted values: 25%, 50%, 100%, 200%</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>camera</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>position</samp>
+												<br>
+												<small>Controls the position of the camera</small>
+											</li>
+											<li>
+												<samp>lookat</samp>
+												<br>
+												<small>Controls the point of vue.</small>
+											</li>
+											<li>
+												<samp>focal_length</samp>
+												<br>
+												<small>Controls the field of view.</small>
+											</li>
+											<li>
+												<samp>filter</samp>
+												<br>
+												<small>Apply filters</small>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>position</samp></li>
+											<li><samp>lookat</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>position</samp>
+												<ul>
+													<li>vector value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>lookat</samp>
+												<ul>
+													<li>vector value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>focal_length</samp>
+												<ul>
+													<li>percentage or float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>filter</samp>
+												<ul>
+													<li>string value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>plane <br> sphere <br> cylinder <br> cone <br> torus <br> paraboloid <br> ellipsoid <br> hyperboloid <br> cubet <br> dingdong <br> goursat <br> teardrop <br> cube</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>position</samp>
+											</li>
+											<li>
+												<samp>color</samp>
+											</li>
+											<li>
+												<samp>translation</samp>
+											</li>
+											<li>
+												<samp>rotation</samp>
+											</li>
+											<li>
+												<samp>noise</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>position</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>position</samp>
+												<ul>
+													<li>vector value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>translation</samp>
+												<ul>
+													<li>vector value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>noise</samp>
+												<ul>
+													<li>string value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>plane</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>normal</samp>
+											</li>
+											<li>
+												<samp>limitx</samp>
+											</li>
+											<li>
+												<samp>limity</samp>
+											</li>
+											<li>
+												<samp>texture</samp>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>normal</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>limity, limitx</samp>
+												<ul>
+													<li>percentage or float value</li>
+													<li>positive values</li>
+													<li>required with each other</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture</samp>
+												<ul>
+													<li>string value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+												<ul>
+													<li>boolean value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>sphere</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>rayon</samp>
+											</li>
+											<li>
+												<samp>sliced</samp>
+											</li>
+											<li>
+												<samp>texture</samp>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>rayon</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>rayon</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>sliced</samp>
+												<ul>
+													<li>boolean value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture</samp>
+												<ul>
+													<li>string value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+												<ul>
+													<li>boolean value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>cylinder</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>rayon</samp>
+											</li>
+											<li>
+												<samp>axe</samp>
+											</li>
+											<li>
+												<samp>limit</samp>
+											</li>
+											<li>
+												<samp>texture</samp>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>rayon</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>rayon</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>limit</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture</samp>
+												<ul>
+													<li>string value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+												<ul>
+													<li>boolean value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>cone</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+											</li>
+											<li>
+												<samp>axe</samp>
+											</li>
+											<li>
+												<samp>limit</samp>
+											</li>
+											<li>
+												<samp>texture</samp>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>k</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>limit</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture</samp>
+												<ul>
+													<li>string value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_slice</samp>
+												<ul>
+													<li>boolean value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_scale</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_x</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>texture_offset_y</samp>
+												<ul>
+													<li>float or percentage value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>torus</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+											</li>
+											<li>
+												<samp>l</samp>
+											</li>
+											<li>
+												<samp>axe</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>k</samp></li>
+											<li><samp>l</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>l</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>paraboloid</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+											</li>
+											<li>
+												<samp>axe</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>k</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>ellipsoid</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>parameters</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>parameters</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>parameters</samp>
+												<ul>
+													<li>vector value</li>
+													<li>all positive values</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>moebius</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>k</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>k</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><samp>cube</samp></th>
+									<td>
+										<ul>
+											<li>
+												<samp>axe</samp>
+											</li>
+											<li>
+												<samp>k</samp>
+												<small>defines the size of the cube</small>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><samp>axe</samp></li>
+											<li><samp>k</samp></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>
+												<samp>axe</samp>
+												<ul>
+													<li>vector value</li>
+												</ul>
+											</li>
+											<li>
+												<samp>k</samp>
+												<ul>
+													<li>float value</li>
+													<li>positive value</li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<h4 id="interface"><a href="#interface">#</a> Interface</h4>
+					<div class="p">
+						Our very friendly user interface that has made our asses sweat with SEGV errors.
+						<img class="screenshot screenshot1" src="./assets/screenshot1.png" alt="">
+						<img class="screenshot screenshot2" src="./assets/screenshot2.png" alt="">
+						Let's walk you through our major buttons.
+						<div class="media mt-5">
+							<img src="./assets/button-add-sphere-normal.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Add sphere</h5>
+								<p>This button let you add a sphere to the scene in-program.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="media">
+							<img src="./assets/button-add-cylinder-hovered.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Add cylinder</h5>
+								<p>This button let you add a cylinder to the scene in-program.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="media">
+							<img src="./assets/button-add-cone-hovered.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Add cone</h5>
+								<p>This button let you add a cone to the scene in-program.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="media">
+							<img src="./assets/button-add-plane-hovered.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Add plane</h5>
+								<p>This button let you add a plane to the scene in-program.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="media">
+							<img src="./assets/noise-voronoi-normal.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Voronoi noise</h5>
+								<p>This button let you change the noise of the selected object to the voronoi noise in-program.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="media">
+							<img src="./assets/noise-perlin-normal.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Perlin noise</h5>
+								<p>This button let you change the noise of the selected object to the perlin noise in-program.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="media mb-5">
+							<img src="./assets/noise-damier-normal.png" class="button align-self-start mr-3" alt="...">
+							<div class="media-body">
+								<h5>Damier noise</h5>
+								<p>This button let you change the noise of the selected object to the damier noise in-program.</p>
+							</div>
+						</div>
+						There's also a handy color picker to change the color of the selected object to pretty much any color you want.
+						<h4 id="ux"><a href="#ux">#</a> User experience</h4>
+						here's a little guide to use our program:
+						<h5>Using your keyboard:</h5>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Button</th>
+									<th scope="col">Use</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><kbd>+</kbd></td>
+									<td>Increment resolution</td>
+								</tr>
+								<tr>
+									<td><kbd>-</kbd></td>
+									<td>Decrement resolution</td>
+								</tr>
+								<tr>
+									<td><kbd>&rarr;</kbd></td>
+									<td>Move the selected object in the positive x axis</td>
+								</tr>
+								<tr>
+									<td><kbd>&larr;</kbd></td>
+									<td>Move the selected object in the negative x axis</td>
+								</tr>
+								<tr>
+									<td><kbd>&uarr;</kbd></td>
+									<td>Move the selected object in the positive y axis</td>
+								</tr>
+								<tr>
+									<td><kbd>&darr;</kbd></td>
+									<td>Move the selected object in the negative y axis</td>
+								</tr>
+								<tr>
+									<td><kbd>W</kbd></td>
+									<td>Move the selected object in the positive z axis</td>
+								</tr>
+								<tr>
+									<td><kbd>S</kbd></td>
+									<td>Move the selected object in the negative z axis</td>
+								</tr>
+								<tr>
+									<td><kbd>Esc</kbd></td>
+									<td>Quit the program</td>
+								</tr>
+							</tbody>
+						</table>
+						<h5>Using your mouse:</h5>
+						<p><b>Right button:</b> Select an object</p>
+						<p><b>Left button:</b> Deselect, interact with the UI elements</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

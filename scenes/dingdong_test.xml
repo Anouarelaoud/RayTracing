@@ -1,0 +1,5 @@
+<world ambient="30%" />
+<screen resolution="50%" />
+<camera position="(0, 20, 5)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(0, 20, 5)" type="default" color="#FFFFFF" intensity="100%" />
+<dingdong position="(0, 0, 0)" color="rgb(252, 250, 227)" noise="perlin" />

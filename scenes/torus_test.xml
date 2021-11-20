@@ -1,0 +1,7 @@
+<world ambient="20%" />
+<screen width="1200" height="600" resolution="50%" />
+<camera position="(0, 0, -30)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(0, 0, -30)" type="default" color="#FFFFFF" intensity="100%" />
+<torus position="(0, 0, 0)" k="1.0" l="2.0" axe="(0, -1, 2)" noise="voronoi" />
+<torus position="(-8, 0, 0)" k="1.0" l="2.0" axe="(0, -1, 0)" noise="perlin" rotation="(30, 10, 0)"/>
+<plane position="(0, 0, 2)" normal="(0, 0, -1)" color="rgb(55, 46, 0)" />

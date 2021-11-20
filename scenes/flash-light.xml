@@ -1,0 +1,9 @@
+<world ambient="30%" name="RT-cone-center" />
+<screen resolution="50%"/>
+<light position="(0, -17, 0)" axis="(0, -1, 0)" angle="30" intensity="100%" />
+<camera position="(0.0, -10, -50.0)" lookat="(0, 0, 0)" />
+<plane position="(0, 3, 0)" normal="(0, -1, 0)" color="rgb(247, 192, 250)" />
+<plane position="(0, 0, 2)" normal="(0, 0, -1)" color="rgb(55, 46, 0)" />
+<cubet position="(0, 0, 0)" color="rgb(171, 2, 78)" noise="perlin" />
+<cubet position="(9, 0, 0)" color="rgb(171, 2, 78)" noise="perlin" />
+<cubet position="(-9, 0, 0)" color="rgb(171, 2, 78)" noise="perlin" />

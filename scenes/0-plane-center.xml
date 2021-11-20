@@ -1,0 +1,5 @@
+<world ambient="30%" name="RT-plane-center" />
+<screen resolution="25%"/>
+<light position="(0, -10, -20)" />
+<camera position="(0.0, 0.0, -50.0)" lookat="(0, 0, 0)" />
+<plane position="(0, 1, 0)" normal="(0, -1, 0)" color="rgb(55, 46, 255)" />

@@ -1,0 +1,10 @@
+<sphere rayon="5" position="(0, 0, 0)" color="rgb(255, 0, 0)"  noise="damier" />
+<sphere rayon="5" position="(0, 0, 0)" color="rgb(255, 0, 0)" texture="./xpm/5.xpm" />
+<world ambient="20%" />
+<screen resolution="25%" />
+<camera position="(0, 0, -50)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(30, -10, -50)" color="#FFFFFF" intensity="100%" />
+<plane position="(0, 5, 0)" normal="(0, -1, 0)" color="rgb(100, 100, 100)"/>
+<plane position="(0, 0, 100)" normal="(0, 0, -1)" color="rgb(0, 0, 255)"/>
+<cone position="(0, 0, 0)" axe="(0, -1, 0)" k="0.7" color="rgb(255, 255, 0)" translation="(6.0, 0.0, 0.0)" rotation="(0.0, 10.0, -30.0)"/>
+<cylinder position="(10, 0, 0)" color="#00FF00" rayon="3" axe="(0, -1, 0) " translation="(-6.0, 0.0, 0.0)" rotation="(0.0, -10.0, 50.0)" />

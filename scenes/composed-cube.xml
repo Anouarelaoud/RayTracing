@@ -1,0 +1,6 @@
+<world ambient="20%" name="RT- Sphere center" />
+<screen resolution="25%" />
+<light position="(0, -50, 0)" intensity="100%" />
+<camera position="(0.0, -20, -50.0)" lookat="(0, 0, 0)" />
+<cube position="(0, -3, 0)" axe="(0, 1, 0)" k="2" rotation="(0, 45, 0)" color="rgb(171, 2, 78)"/>
+<plane position="(0, 3, 0)" normal="(0, -1, 0)" color="rgb(247, 192, 250)" />

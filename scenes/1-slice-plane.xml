@@ -1,0 +1,5 @@
+<world ambient="30%" name="RT-Sliced Plane" />
+<screen resolution="100%"/>
+<light position="(0, 0, -20)" />
+<camera position="(0.0, 0.0, -50.0)" lookat="(0, 0, 0)" />
+<plane position="(0, 1, 0)" normal="(0, 0, -1)" color="rgb(55, 46, 255)" limitx="2" limity="2" />

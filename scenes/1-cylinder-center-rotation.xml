@@ -1,0 +1,5 @@
+<world ambient="30%" name="RT - Cylinder center rotation" />
+<screen width="1200" height="600" />
+<light position="(0, 0, -50)" />
+<camera position="(0.0, 0.0, -50.0)" lookat="(0, 0, 0)" />
+<cylinder position="(0, 0, 0)" axe="(0, 1, 0)" rayon="2" rotation="(0, 0, 45)" />

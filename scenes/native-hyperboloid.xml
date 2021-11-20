@@ -1,0 +1,5 @@
+<world ambient="30%" />
+<screen width="1200" height="600" resolution="50%" />
+<camera position="(1, 1, 0)" lookat="(0, 0, 0)" focal_length="20%" />
+<light position="(60, 60, 0)" type="default" color="#FFFFFF" intensity="100%" />
+<hyperboloid position="(0, 0, 0)" parameters="(12, 9, 20)" noise="perlin" color="rgb(252, 250, 227)" />

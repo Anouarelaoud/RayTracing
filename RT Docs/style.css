@@ -1,0 +1,38 @@
+.p {
+	width: 90%;
+	margin: auto;
+}
+
+body {
+	padding-bottom: 200px;
+}
+
+.code {
+	background-color: rgb(32, 32, 32) !important;
+	width: 80%;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px auto;
+}
+
+h4, h5 {
+	margin: 20px 0;
+}
+
+h4 {
+	padding-top: 100px
+}
+
+.screenshot {
+	margin: 20px 0;
+	width: 100%;
+	height: auto;
+}
+
+.col-2 {
+	padding: 100px 0;
+}
+
+.button {
+	width: 100px;
+}

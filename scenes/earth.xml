@@ -1,0 +1,6 @@
+<world ambient="20%" />
+<screen resolution="100%" />
+<camera position="(0, 0, -40)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(30, -10, -50)" type="default" color="#FFFFFF" intensity="100%" />
+<plane position="(0, 0, 100)" normal="(0, 0, -1)" color="rgb(0, 0, 255)" texture="./xpm/stars.xpm" />
+<sphere rayon="-5" position="(0, 0, 0)" color="rgb(255, 0, 0)" texture="./xpm/5.xpm" />

@@ -1,0 +1,8 @@
+<world ambient="30%" />
+<screen resolution="50%" />
+<camera position="(0, -2, -10)" lookat="(0, 0, 0)" focal_length="100%" />
+<light position="(0, -20, 0)" type="default" color="#FFFFFF" intensity="100%" />
+<ellipsoid position="(0, 0, 0)" parameters="(3, 5, 5)" color="rgb(130, 118, 10)" noise="perlin" />
+<ellipsoid position="(-2, 0, 0)" parameters="(13, 5, 5)" color="rgb(130, 118, 10)" noise="damier"/>
+<ellipsoid position="(2, 0, 0)" parameters="(3, 5, 15)" color="rgb(130, 118, 10)" noise="voronoi" />
+<plane position="(0, 10, 0)" normal="(0, -1, 0)" color="rgb(247, 238, 156)" />

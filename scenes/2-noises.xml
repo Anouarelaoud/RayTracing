@@ -1,0 +1,37 @@
+<world ambient="30%" name="RT-Sliced Cone" />
+<screen resolution="25%" />
+<light position="(10, 0, -500)" intensity="10%"/>
+<light position="(20, -12, -5)" intensity="100%"/>
+<camera position="(0.0, -8, -50.0)" lookat="(0, 0, 0)" />
+<paraboloid position="(-22, -10, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(-15, -5, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(-10, -10, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(-5, -5, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(0, -8, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(5, -10, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(10, -6, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(15, -9, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<paraboloid position="(21, -10, 0)" k="0.5" axe="(0, 1, 0)" noise="perlin" color="rgb(160,82,45)" />
+<cone position="(3, 1, -25)" axe="(0, 1, 0)" k="0.3" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)"/>
+<cone position="(3, 1, -21)" axe="(0, 1, 0)" k="0.3" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)"/>
+<cone position="(-3, 1, -25)" axe="(0, 1, 0)" k="0.3" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)"/>
+<cone position="(-3, 1, -21)" axe="(0, 1, 0)" k="0.3" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)"/>
+<cylinder position="(-11, 0, -26)" axe="(0.0, 1.0, 0.0)" rayon="0.2" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)" />
+<cylinder position="(-11, -1, -20)" axe="(0.0, 1.0, 0.0)" rayon="0.2" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)" />
+<cylinder position="(-11, -1, -15)" axe="(0.0, 1.0, 0.0)" rayon="0.2" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)" />
+<cylinder position="(-6, -1, -26)" axe="(0.0, 1.0, 0.0)" rayon="0.2" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)" />
+<cylinder position="(-6, -1, -20)" axe="(0.0, 1.0, 0.0)" rayon="0.2" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)" />
+<cylinder position="(-6, -1, -15)" axe="(0.0, 1.0, 0.0)" rayon="0.2" limit="2" rotation="(0, 0, 0)" noise="perlin" color="rgb(115, 36, 0)" />
+<ellipsoid position="(0, 0, 0)" parameters="(16, 9, 5)" noise="voronoi"/>
+<goursat position="(-9, -4, -30)" noise="perlin" color="rgb(8, 252, 65)" />
+<goursat position="(-8.5, -4, -27)" noise="perlin" color="rgb(8, 252, 65)"/>
+<goursat position="(-9, -4, -20)" noise="perlin" color="rgb(8, 252, 65)"/>
+<goursat position="(-5, -4, -30)" noise="perlin" color="rgb(8, 252, 65)"/>
+<goursat position="(-5, -4, -27)" noise="perlin" color="rgb(8, 252, 65)"/>
+<goursat position="(-5.5, -4, -20)" noise="perlin" color="rgb(8, 252, 65)" />
+<plane position="(0, 1, 0)" normal="(0, -1, 0)" color="rgb(92, 245, 32)"  />
+<plane position="(0, 0.97, -40)" normal="(0, -1, 0)" color="rgb(2, 95, 153)" limitx="2" limity="80" noise="perlin" />
+<plane position="(0, -1, -23)" normal="(0, -1, 0)" color="rgb(115, 36, 0)" limitx="4" limity="2" noise="perlin" />
+<plane position="(7.3, 1, -23)" normal="(0, -1, 0)" color="rgb(115, 36, 0)" limitx="4" limity="2" rotation="(0, 0, 30)" noise="perlin" />
+<plane position="(-7.4, 1, -23)" normal="(0, -1, 0)" color="rgb(115, 36, 0)" limitx="4" limity="2" rotation="(0, 0, -30)" noise="perlin" />
+<plane position="(0, 1, 2)" normal="(0, 0, -1)"  color="rgb(43, 163, 207)" />

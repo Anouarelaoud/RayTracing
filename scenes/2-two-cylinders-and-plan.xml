@@ -1,0 +1,7 @@
+<world ambient="30%" name="two-cylinders-and-plan" />
+<screen resolution="50%" />
+<light position="(0, -50, -50)" intensity="100%"/>
+<camera position="(0.0, -50.0, -50)" lookat="(0, 0, 0)"  />
+<cylinder position="(0, 0, 0)" axe="(0, 1, 0)" rayon="3" color="rgb(235,214,41)" limit="5" noise="voronoi"/>
+<cylinder position="(-10, 0, 0)" axe="(0, 1, 0)" rayon="3" color="rgb(255,44,41)" rotation="(45, -45, 0)"  texture="./xpm/5.xpm" texture_slice="true" />
+<plane position="(0, 10, 0)" normal="(0, -1, 0)" color="rgb(255,255,255)" texture="./xpm/5.xpm" texture_slice="true"  />
